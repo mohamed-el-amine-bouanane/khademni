@@ -1,0 +1,75 @@
+
+.Card1{
+    transition: transform 0.5s;
+}
+
+.Card2{
+    transition: transform 0.5s;
+}
+
+.clr{
+    transition: opacity 0.1s;
+}
+.hov1:hover .clr{
+    opacity: 0.19;
+}
+.BigCard:hover .Card1{
+    transform: rotate(0deg);
+}
+
+.BigCard:hover .Card2{
+    transform: rotate(0deg);
+}
+
+.txt{
+    transition: translate 0.3s;
+}
+
+
+.Exp{
+    transition: opacity 0.2s ;
+    translate: 0 -20px;
+}
+
+@media (min-width: 1024px){
+    .Explore:hover .txt{
+        translate: 0 -20px;
+    }
+    .Explore:hover .Exp{
+        opacity: 1;
+    }
+    
+}
+
+.hid{
+    visibility: hidden;
+}
+
+.borderImage {
+    border: 10px solid black;
+    padding: 15px;
+    border-image: url(BorderImg.png) 20 round;
+}
+
+.cardContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @apply transition-all duration-300 delay-150 w-24 sm:w-28 md:w-32 lg:w-40
+  }
+  
+  .cardContainer > * {
+    width: 100%; /* Ensures the CardJob takes up the full width of its container */
+  }
+  
+  @media (min-width: 768px) {
+    .hidden.md\:cardContainer {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @apply transition-all duration-300 delay-150 w-24 sm:w-28 md:w-32 lg:w-40
+  
+    }
+  }
